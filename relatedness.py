@@ -20,6 +20,5 @@ pipe = pipeline(
     max_length=512
 )
 
-# See https://huggingface.co/docs/transformers/main_classes/pipelines#transformers.pipeline
 for out in tqdm(pipe(KeyDataset(dataset, "text"), padding=True, truncation=True)):
    print(out)

@@ -21,5 +21,13 @@ pipe = pipeline(
     max_length=512
 )
 
+count = 0
+total = 0
 for out in tqdm(pipe(KeyDataset(dataset, "text"))):
+    if out['score'] >= 0.8:
+        total += 1
+        if out['label'] == 'spec':
+            count += 1
     print(out)
+print(f"Specificity count: {count} out of {total} with score >= 0.8")
+print(f"Specificity percentage: {count/total*100 if total > 0 else 0}%")

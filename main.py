@@ -156,6 +156,7 @@ def run_all_metrics_for_file(dataset_name):
 
 if __name__ == "__main__":
     import sys
+    import os
 
     input_files = sys.argv[1:]
     if not input_files:
@@ -174,15 +175,18 @@ if __name__ == "__main__":
         "risk",
     ]
 
-    with open("results.csv", "w", newline="", encoding="utf-8") as f:
+    file_exists = os.path.exists("results.csv")
+
+    with open("results.csv", "a", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
+
+        if not file_exists:
+            writer.writeheader()
 
         for path in input_files:
             print(f"Processing {path} ...")
             row = run_all_metrics_for_file(path)
             writer.writerow(row)
 
-    print("results.csv written.")
-
+    print("results.csv updated")
 

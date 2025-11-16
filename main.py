@@ -21,16 +21,24 @@ def load_model_and_pipe(model_name):
         max_length=512
     )
 
+
+
 def run_binary_classifier(pipe, dataset, positive_label, score_threshold=0.8, weight_map=None):
-    """Generic pass for yes/no, risk/neutral, etc."""
     total = 0
     count = 0
+
+    # make sure weight_map is always a dict
+    if weight_map is None:
+        if positive_label is not None:
+            weight_map = {positive_label: 1}
+        else:
+            weight_map = {}
 
     for out in tqdm(pipe(KeyDataset(dataset, "text"))):
         if out["score"] >= score_threshold:
             total += 1
-            if out["label"] in weight_map:
-                count += weight_map[out["label"]]
+            # treat unknown labels as weight 0
+            count += weight_map.get(out["label"], 0)
 
     return count, total
 
@@ -68,8 +76,12 @@ def sentiment(_, dataset_name):
     dataset = load_text_dataset(dataset_name)
     pipe = load_model_and_pipe("climatebert/distilroberta-base-climate-sentiment")
 
-    # weight risk=2, neutral=1
-    weight_map = {"risk": 2, "neutral": 1}
+    # risk=2, neutral=1, opportunity=0
+    weight_map = {
+        "risk": 2,
+        "neutral": 1,
+        "opportunity": 0,
+    }
 
     count, total = run_binary_classifier(pipe, dataset, positive_label="risk", weight_map=weight_map)
     return round(count / (total * 2), 2) if total > 0 else 0
@@ -127,16 +139,18 @@ def run_all_metrics_for_file(dataset_name):
         filtered_file,
     )
 
+    sum_tcfd = sum(tcfd.values())
+
     return {
         "name": name,
         "relate": relate,
         "spec": spec,
         "senti": senti,
         "commit": commit,
-        "metrics": tcfd.get("metrics", 0),
-        "strategy": tcfd.get("strategy", 0),
-        "governance": tcfd.get("governance", 0),
-        "risk": tcfd.get("risk", 0),
+        "metrics": (tcfd.get("metrics", 0)/ sum_tcfd) if sum_tcfd > 0 else 0,
+        "strategy": (tcfd.get("strategy", 0)/ sum_tcfd) if sum_tcfd > 0 else 0,
+        "governance": (tcfd.get("governance", 0)/ sum_tcfd) if sum_tcfd > 0 else 0,
+        "risk": (tcfd.get("risk", 0)/ sum_tcfd) if sum_tcfd > 0 else 0,
     }
 
 

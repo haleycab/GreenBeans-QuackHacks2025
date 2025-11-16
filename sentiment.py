@@ -3,11 +3,8 @@ from transformers.pipelines.pt_utils import KeyDataset
 import datasets
 from tqdm.auto import tqdm
 
-dataset_name = "local_spectest.csv"
-dataset = datasets.load_dataset("csv", data_files=dataset_name)["train"]
-
-# dataset.to_csv("sentiment_test.csv")
-# print("Saved to sentiment_test.csv")
+dataset_name = "related_data.txt"
+dataset = datasets.load_dataset("text", data_files=dataset_name)["train"]
 
 model_name = "climatebert/distilroberta-base-climate-sentiment"
 model = AutoModelForSequenceClassification.from_pretrained(model_name)
@@ -23,5 +20,15 @@ pipe = pipeline(
     max_length=512
 )
 
+total = 0
+count = 0
 for out in tqdm(pipe(KeyDataset(dataset, "text"), padding=True, truncation=True)):
-   print(out)
+    if out['score'] >= 0.8:
+        total += 1
+        if out['label'] == 'risk':
+            count += 2
+        elif out['label'] == 'neutral':
+            count += 1
+    print(out)
+print(f"risk score {count/(total*2)} with score >= 0.8")
+

@@ -4,8 +4,8 @@ import datasets
 from tqdm.auto import tqdm
 
 #change file name here
-dataset_name = "local_spectest.csv"
-dataset = datasets.load_dataset("csv", data_files=dataset_name)["train"]
+dataset_name = "related_data.txt"
+dataset = datasets.load_dataset("text", data_files=dataset_name)["train"]
 
 model_name = "climatebert/distilroberta-base-climate-specificity"
 model = AutoModelForSequenceClassification.from_pretrained(model_name)

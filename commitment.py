@@ -3,8 +3,8 @@ from transformers.pipelines.pt_utils import KeyDataset
 import datasets
 from tqdm.auto import tqdm
 
-dataset_name = "local_spectest.csv"
-dataset = datasets.load_dataset("csv", data_files=dataset_name)["train"]
+dataset_name = "related_data.txt"
+dataset = datasets.load_dataset("text", data_files=dataset_name)["train"]
 
 model_name = "climatebert/distilroberta-base-climate-commitment"
 model = AutoModelForSequenceClassification.from_pretrained(model_name)
@@ -20,5 +20,13 @@ pipe = pipeline(
     max_length=512
 )
 
-for out in tqdm(pipe(KeyDataset(dataset, "text"), padding=True, truncation=True)):
-   print(out)
+count = 0
+total = 0
+for out in tqdm(pipe(KeyDataset(dataset, "text"))):
+    if out['score'] >= 0.8:
+        total += 1
+        if out['label'] == 'yes':
+            count += 1
+    print(out)
+print(f"Commitment count: {count} out of {total} with score >= 0.8")
+print(f"Commitment p: {count/total if total > 0 else 0}")

@@ -20,5 +20,25 @@ pipe = pipeline(
     max_length=512
 )
 
-for out in tqdm(pipe(KeyDataset(dataset, "text"), padding=True, truncation=True)):
-   print(out)
+count = 0
+total = 0
+kept_lines = []
+for text, out in zip(dataset["text"], tqdm(pipe(KeyDataset(dataset, "text")))):
+    # print the raw pipeline output
+    print(out)
+
+    if out["score"] >= 0.8:
+        total += 1
+        if out["label"] == "yes":
+            count += 1
+            kept_lines.append(text)
+
+print(f"\nhigh confidence lines: {total}")
+print(f"related lines: {count}")
+with open("related_data.txt", "w", encoding="utf-8") as f:
+    for line in kept_lines:
+        f.write(f'"{line}"\n')
+
+print("Saved")
+   
+         

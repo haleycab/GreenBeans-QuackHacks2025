@@ -4,7 +4,7 @@ import datasets
 from tqdm.auto import tqdm
 
 #change file name here
-dataset_name = "/data/process_reports_texts.txt"
+dataset_name = "data/processed_reports_text.txt"
 dataset = datasets.load_dataset("text", data_files=dataset_name)["train"]
 
 model_name = "climatebert/distilroberta-base-climate-specificity"
@@ -26,6 +26,7 @@ for text, out in zip(dataset["text"], tqdm(pipe(KeyDataset(dataset, "text")))):
     if out['score'] >= 0.8:
         if out['label'] == 'spec':
             kept_lines.append(text)
+            print(out)
 
 with open("specific_data.txt", "w", encoding="utf-8") as f:
     for line in kept_lines:

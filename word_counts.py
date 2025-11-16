@@ -3,7 +3,7 @@ import re
 from collections import Counter
 
 # Load dataset
-df = pd.read_csv("data/local_spectest.csv")
+df = pd.read_csv("data/comp_reports_compiled.csv")
 
 # Ensure text is string
 df["text"] = df["text"].astype(str)

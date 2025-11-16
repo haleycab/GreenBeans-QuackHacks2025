@@ -2,14 +2,14 @@ import pandas as pd
 import textwrap
 import funcs
 
-reports = pd.read_csv("data/sustainability_reports.csv")
+reports = pd.read_csv("data/kaggle_old/sustainability_reports.csv")
 preprocessed_content = reports['preprocessed_content']
 
 # Apply to each row
 reports["processed_lines"] = reports["preprocessed_content"].apply(funcs.split_and_quote)
 
 # 1) Save FULL DATASET
-full_output_path = "data/processed_reports_text.txt"
+full_output_path = "data/kaggle_old/processed_reports_text.txt"
 
 with open(full_output_path, "w", encoding="utf-8") as f:
     for lines in reports["processed_lines"]:
@@ -24,7 +24,7 @@ print("Saved full dataset to:", full_output_path)
 # Choose first 5 — OR use: reports.sample(5, random_state=42)
 sample_df = reports.iloc[:5]
 
-sample_output_path = "data/processed_reports_sample_5.txt"
+sample_output_path = "data/kaggle_old/processed_reports_sample_5.txt"
 
 with open(sample_output_path, "w", encoding="utf-8") as f:
     for lines in sample_df["processed_lines"]:

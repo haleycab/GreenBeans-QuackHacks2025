@@ -3,7 +3,7 @@ import glob
 import pandas as pd
 
 CHUNK_DIR = "data/processed_txt_2024"
-OUT_CSV = "data/local_spectest.csv"
+OUT_CSV = "data/comp_reports_compiled.csv"
 
 rows = []
 

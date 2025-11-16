@@ -1,0 +1,11 @@
+ticker,company_name,year,report_url,format
+AAPL,Apple Inc.,2024,https://www.apple.com/environment/pdf/Apple_Environmental_Progress_Report_2024.pdf,pdf
+MSFT,Microsoft Corporation,2024,https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/msc/documents/presentations/CSR/Microsoft-2024-Environmental-Sustainability-Report.pdf,pdf
+GOOGL,Alphabet Inc.,2024,https://www.gstatic.com/gumdrop/sustainability/google-2024-environmental-report.pdf,pdf
+AMZN,Amazon.com Inc.,2024,https://sustainability.aboutamazon.com/2024-amazon-sustainability-report.pdf,pdf
+META,Meta Platforms Inc.,2024,https://sustainability.atmeta.com/wp-content/uploads/2024/08/Meta-2024-Sustainability-Report.pdf,pdf
+TSLA,Tesla Inc.,2024,https://www.tesla.com/ns_videos/2024-extended-version-tesla-impact-report.pdf,pdf
+NVDA,NVIDIA Corporation,2024,https://images.nvidia.com/aem-dam/Solutions/documents/FY2024-NVIDIA-Corporate-Sustainability-Report.pdf,pdf
+XOM,Exxon Mobil Corporation,2024,https://corporate.exxonmobil.com/-/media/global/files/sustainability-report/2024/sustainability-report.pdf,pdf
+CVX,Chevron Corporation,2024,https://www.chevron.com/-/media/shared-media/documents/chevron-sustainability-highlights-2024.pdf,pdf
+JPM,JP Morgan Chase & Co.,2024,https://www.jpmorganchase.com/content/dam/jpmorganchase/documents/about/jpmc-sustainability-report-2024.pdf,pdf

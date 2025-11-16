@@ -1,0 +1,149 @@
+ticker,name,all_total_emissions
+duk,Duke Energy Corp,65077745.6
+aep,American Electric Power Company Inc,48124049.1
+nee,Nextera Energy Inc,40964268.73
+xom,Exxon Mobil Corp,36792767.3
+etr,Entergy Corp,32446877
+psx,Phillips 66,30706527.9
+xel,Xcel Energy Inc,29597308.07
+d,Dominion Energy Inc,29274234.36
+mpc,Marathon Petroleum Corp,28729668.85
+ppl,PPL Corp,26919146.4
+vlo,Valero Energy Corp,23535216.6
+dte,DTE Energy Co,23317452.07
+nrg,NRG Energy Inc,22723329.3
+cf,CF Industries Holdings Inc,20579424.2
+cvx,Chevron Corp,19859598.27
+aee,Ameren Corp,19790344.65
+wec,WEC Energy Group Inc,19196211.6
+evrg,Evergy Inc,19050740.8
+dow,Dow Inc,16789121
+aes,AES Corp,15677526.8
+lnt,Alliant Energy Corp,15563848.5
+fe,FirstEnergy Corp,15338451.14
+wm,Waste Management Inc,11650459.6
+oxy,Occidental Petroleum Corp,11123031.5
+rsg,Republic Services Inc,10718356
+cms,CMS Energy Corp,10419392.9
+lin,Linde PLC,8787322.32
+cop,Conocophillips,7979116.61
+pnw,Pinnacle West Capital Corp,5905134.814
+emn,Eastman Chemical Co,5899994.094
+wrk,Westrock Co,5779510.3
+eog,EOG Resources Inc,5578196.99
+nue,Nucor Corp,5386353.79
+ni,NiSource Inc,5027591.002
+he,Hawaiian Electric Industries Inc,4498201.56
+dvn,Devon Energy Corp,4466016.7
+cnp,CenterPoint Energy Inc,4192299.887
+pxd,Pioneer Natural Resources Co,4123898.239
+mlm,Martin Marietta Materials Inc,3999044.16
+ed,Consolidated Edison Inc,3983727.99
+oke,ONEOK Inc,3424095.6
+sre,Sempra Energy,3423949.108
+mro,Marathon Oil Corp,2514878.82
+l,Loews Corp,2049069.343
+tsn,Tyson Foods Inc,1874907.49
+fang,Diamondback Energy Inc,1757044.2
+ce,Celanese Corp,1710685.84
+hes,Hess Corp,1509286.487
+pkg,Packaging Corp of America,1498344.23
+nem,Newmont Corporation,1393004.11
+sre,Sempra Energy,1385410.819
+ctra,Coterra Energy Inc,1358410.24
+dal,Delta Air Lines Inc,1256096.86
+hcc,Warrior Met Coal Inc,1163558.75
+eix,Edison International,1101786.047
+txn,Texas Instruments Inc,1057774.34
+mmm,3M Co,1007143.69
+cmc,Commercial Metals Co,860624.344
+ato,Atmos Energy Corp,574821.726
+sre,Sempra Energy,555211.294
+f,Ford Motor Co,497625.124
+gm,General Motors Co,491788.832
+mchp,Microchip Technology Inc,472938.202
+peg,Public Service Enterprise Group Inc,463035.342
+cat,Caterpillar Inc,456901.738
+lw,Lamb Weston Holdings Inc,413668.974
+mrk,Merck & Co Inc,365529.704
+hon,Honeywell International Inc,354899.0292
+pep,PepsiCo Inc,317942.602
+mu,Micron Technology Inc,303884.348
+exc,Exelon Corp,301249.6376
+mhk,Mohawk Industries Inc,292597.1
+wec,WEC Energy Group Inc,285126.636
+ge,General Electric Co,272224.3928
+fcx,Freeport-McMoRan Inc,260273.666
+alb,Albemarle Corp,229671.722
+pfe,Pfizer Inc,225796.41
+es,Eversource Energy,206262.3
+cpb,Campbell Soup Co,206162.124
+ppg,PPG Industries Inc,198602.998
+emn,Eastman Chemical Co,194469.09
+dd,Dupont De Nemours Inc,180836.708
+cmp,Compass Minerals International Inc,151413.08
+glw,Corning Inc,146051.952
+abt,Abbott Laboratories,134386.892
+wec,WEC Energy Group Inc,128827.002
+hwm,Howmet Aerospace Inc,124137.594
+adi,Analog Devices Inc,117771.628
+cag,Conagra Brands Inc,112660.176
+noc,Northrop Grumman Corp,110192.278
+mgm,MGM Resorts International,110103.336
+qrvo,Qorvo Inc,102517.522
+spr,Spirit AeroSystems Holdings Inc,100998.62
+abbv,Abbvie Inc,99777.824
+lmt,Lockheed Martin Corp,95794.134
+bmy,Bristol-Myers Squibb Co,95102.74
+leg,Leggett & Platt Inc,85048.448
+tsla,Tesla Inc,80515.196
+gm,General Motors Co,80382.12
+gis,General Mills Inc,70688.598
+mo,Altria Group Inc,66467.196
+amgn,Amgen Inc,61780.352
+hrl,Hormel Foods Corp,58585.68
+hayn,Haynes International Inc,56641.288
+ctva,Corteva Inc,56532.988
+googl,Alphabet Inc,56418.04
+czr,Caesars Entertainment Inc,56095.788
+txt,Textron Inc,55579.572
+hcci,Heritage-Crystal Clean Inc,51235.75
+hii,Huntington Ingalls Industries Inc,49706.726
+qcom,Qualcomm Inc,48566.816
+de,Deere & Co,45075.88
+bax,Baxter International Inc,43203.836
+usap,Universal Stainless & Alloy Products Inc,42448.248
+wy,Weyerhaeuser Co,41144.524
+avgo,Broadcom Inc,34457.052
+aal,American Airlines Group Inc,34261.918
+tmo,Thermo Fisher Scientific Inc,28392.342
+biib,Biogen Inc,28268.192
+vtrs,Viatris Inc,26031.806
+swks,Skyworks Solutions Inc,24116.72
+rtx,Raytheon Technologies Corp,18147.032
+whr,Whirlpool Corp,0
+tgt,Target Corp,0
+carr,Carrier Global Corp,0
+azo,Autozone Inc,0
+tt,Trane Technologies PLC,0
+NVDA,Nvidia,3692423
+AAPL,Apple,15600000
+MSFT,Microsoft,17162000
+AMZN,Amazon,68250000
+GOOGL,Google,14300000
+META,Meta,7500000
+CVX,Chevron,54000000
+JPM,JP Morgan,873876
+XOM,Exxon Mobil,290000
+WMT,Walmart,15060000
+V,Visa Inc.,487000
+ORCL,Oracle Corporation,1164600
+JNJ,Johnson & Johnson,7372687
+AVGO,Broadcom,1847962
+LLY,Lilly (Eli),6701000
+COST,Costco,4700000
+BAC,Bank of America,68821
+HD,Home Depot,206494563
+CSCO,Cisco,17092306
+KO,Coca-Cola Company,61517567
+UNH,UnitedHealth Group,17977601
